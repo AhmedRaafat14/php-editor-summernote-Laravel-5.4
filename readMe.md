@@ -37,13 +37,15 @@
 > In page you should reference to this files in its sections:
 
 	* Header: [fonts, summernote.css]:
+	
 	  ```css
 		<link href="{{ asset('public/summernote/css/font-awesome.css')}}" rel="stylesheet"> -->
           	<link href="{{ asset('public/summernote/css/summernote.css')}}" rel="stylesheet" type="text/css" />
 	  ```
 	
 	* Footer [js files]:
-	  ```css
+	  
+	```css
 	  	 <script src="{{ asset('public/summernote/js/summernote.js')}}"></script>
 	  	 <script src="{{ asset('public/summernote/js/bootstrap.min.js')}}"></script>
 	  ```
@@ -52,15 +54,18 @@
 
 > In your blade add textarea or div as waht you need and then give it ['id="summernote"' or 'class="summernote"']
 	* Textarea:
+	
 	```html
 		{!! Form::textarea('content',null, array('form-control','id'=>'summernote') ) !!}
 	```
 	* Div:
+	
 	```html
 		<div id='summernote'></div>
 	```
 
 * In your page add some input hidden to hold your route url: 
+	
 	```html
 		{!! Form::hidden('url',url('upload_image'), array('class'=>'url') ) !!}
 	```
