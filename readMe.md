@@ -1,4 +1,4 @@
-#Summernote integrate with Laravel 5.4
+# Summernote integrate with Laravel 5.4
 
 * First of all create in your public folder folder called ['uploads'].
 * In ['uploads'] folder create two folders on called ['img'] and other one called ['img-uploads'].
@@ -8,8 +8,8 @@
 
 * In your ['routes/web.php'] put your route [' Route::post('/upload_image', '\YourController@uploadImage'); ']
 
-	# Add this function to your controller:
-	<
+>	 Add this function to your controller:
+```php	
 	    public function uploadImage(Request $request)
 	    {
 		// A list of permitted file extensions
@@ -26,7 +26,7 @@
 		    echo url('/').'/public/uploads/img-uploads/'.$_FILES['file']['name'];
 		}
 	    }
-	>
+```
 
 * In page you should reference to this files in its sections:
 	* Header: [fonts, summernote.css]:
